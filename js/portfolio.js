@@ -8,7 +8,7 @@ let container = document.querySelector('.logoGraphic');
 
 let animation = bodymovin.loadAnimation({
     container: container, 
-    path: '/content/mindover.json', 
+    path: '/content/mindMixD.json', 
     renderer: 'svg', 
     loop: true, 
     autoplay: true,
