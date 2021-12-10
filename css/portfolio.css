@@ -43,6 +43,10 @@ p, h1 {
   font-family: 'Certeau';
 }
 
+.introContainer {
+  margin-bottom: 4em;
+}
+
 .introContainer .introContent {
   position: absolute;
   background-color: #43635B;
@@ -94,11 +98,9 @@ p, h1 {
 
 .aboutContainer .aboutContent .aboutGraphic {
   grid-area: graphic;
-  width: 100%;
-  max-width: 5em;
   position: absolute;
+  width: 90%;
   bottom: 0;
-  filter: saturate(0);
 }
 
 .aboutContainer .aboutContent .aboutText {
@@ -119,13 +121,13 @@ p, h1 {
 
 @media (min-width: 500px) {
   .aboutContainer {
-    margin-bottom: 22em;
+    margin-bottom: 20em;
   }
   .aboutContainer .aboutContent {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 3fr 1fr;
   }
   .aboutContainer .aboutContent .aboutGraphic {
-    max-width: 6em;
+    max-width: 18em;
   }
   .aboutContainer .aboutContent .aboutText p {
     font-size: 1rem;
@@ -791,6 +793,7 @@ p, h1 {
 
 .contactContainer {
   margin-bottom: 0;
+  margin-top: 4em;
 }
 
 .contactContainer .contactContent {
@@ -798,26 +801,17 @@ p, h1 {
   height: 100%;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 15em 1fr;
-  grid-template-rows: 1fr 1fr 3fr;
-  grid-template-areas: '. . .' '. bottle .' '. block block';
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1.5fr 1fr;
+  grid-template-areas: '. bottle .' '. block block';
 }
 
 .contactContainer .contentGraphic {
-  width: 12em;
   grid-area: bottle;
   position: absolute;
   bottom: 0;
-}
-
-.contactContainer .wave {
-  position: absolute;
-  grid-area: bottle;
-  bottom: 0;
-  clip-path: url(#clip);
-  width: 12em;
-  height: 12em;
-  object-fit: cover;
+  width: 5em;
+  filter: saturate(0);
 }
 
 .contactContainer .contactBlock {
@@ -851,6 +845,12 @@ p, h1 {
 }
 
 @media (min-width: 500px) {
+  .contactContainer {
+    margin-top: 9em;
+  }
+  .contactContainer .contactContent .contentGraphic {
+    width: 7em;
+  }
   .contactContainer .contactContent .contactText h1 {
     font-size: 1.1em;
     letter-spacing: .15rem;

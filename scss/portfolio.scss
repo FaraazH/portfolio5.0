@@ -50,7 +50,7 @@ p, h1 {
 
 ////////////////////////////////////////////////////////////////////////INTRO
 .introContainer {
-    // margin-bottom: 1em;
+    margin-bottom: 4em;
 
     .introContent{
         position: absolute;
@@ -108,6 +108,7 @@ p, h1 {
     margin-bottom: 10em;
 
         .aboutContent {
+            // background-color: antiquewhite;
             position: relative;
             height: 100%;
             width: 100%;
@@ -120,13 +121,11 @@ p, h1 {
 
             .aboutGraphic {
                 grid-area: graphic;
-                width: 100%;
-                max-width: 5em;
                 position: absolute;
+                width: 90%;
                 bottom: 0;
-                filter: saturate(0);
             }
-
+            
             .aboutText {
                 grid-area: text;
                 background-color: #43635B;
@@ -150,13 +149,13 @@ p, h1 {
 @media (min-width: 500px) {
 
     .aboutContainer {
-        margin-bottom: 22em;
+        margin-bottom: 20em;
 
         .aboutContent {
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 3fr 1fr;
 
             .aboutGraphic {
-                max-width: 6em;
+                max-width: 18em;
             }
 
             .aboutText {
@@ -963,35 +962,56 @@ p, h1 {
 ////////////////////////////////////////////////////////////////////////CONTACT
 .contactContainer {
     margin-bottom: 0;
+    margin-top: 4em;
+
+    // .contactContent {
+    //     position: relative;
+    //     height: 100%;
+    //     width: 100%;
+    //     display: grid;
+    //     grid-template-columns: 1fr 15em 1fr;
+    //     grid-template-rows: 1fr 1fr 3fr;
+    //     grid-template-areas: 
+    //     '. . .'
+    //     '. bottle .'
+    //     '. block block';
+    // }
+
+    // .contentGraphic {
+    //     width: 12em;
+    //     grid-area: bottle;
+    //     position: absolute;
+    //     bottom: 0;
+    // }
+
+    //     .wave {
+    //     position: absolute;
+    //     grid-area: bottle;
+    //     bottom: 0;
+    //     clip-path: url(#clip);
+    //     width: 12em;
+    //     height: 12em;
+    //     object-fit: cover;
+    // }
 
     .contactContent {
         position: relative;
         height: 100%;
         width: 100%;
         display: grid;
-        grid-template-columns: 1fr 15em 1fr;
-        grid-template-rows: 1fr 1fr 3fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1.5fr 1fr;
         grid-template-areas: 
-        '. . .'
         '. bottle .'
         '. block block';
     }
 
     .contentGraphic {
-        width: 12em;
         grid-area: bottle;
         position: absolute;
         bottom: 0;
-    }
-
-    .wave {
-        position: absolute;
-        grid-area: bottle;
-        bottom: 0;
-        clip-path: url(#clip);
-        width: 12em;
-        height: 12em;
-        object-fit: cover;
+        width: 5em;
+        filter: saturate(0);
     }
 
     .contactBlock {
@@ -1028,8 +1048,13 @@ p, h1 {
 @media(min-width: 500px) {
 
     .contactContainer {
+        margin-top: 9em;
 
         .contactContent {
+
+            .contentGraphic {
+                width: 7em;
+            }
 
             .contactText {
 
