@@ -1091,8 +1091,8 @@ p, h1 {
 
 .bottleContainer {
 
-    height: 50vh;
-    height: calc(var(--vh, 1vh) * 50);
+    // height: 50vh;
+    // height: calc(var(--vh, 1vh) * 50);
 
     .bottleContent {
         position: relative;
@@ -1149,7 +1149,7 @@ p, h1 {
 @media(min-width: 500px) {
 
     .bottleContainer {
-        margin-top: 9em;
+        // margin-top: 9em;
 
         .bottleContent {
 

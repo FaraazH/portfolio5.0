@@ -873,11 +873,6 @@ p, h1 {
   }
 }
 
-.bottleContainer {
-  height: 50vh;
-  height: calc(var(--vh, 1vh) * 50);
-}
-
 .bottleContainer .bottleContent {
   position: relative;
   height: 100%;
@@ -926,9 +921,6 @@ p, h1 {
 }
 
 @media (min-width: 500px) {
-  .bottleContainer {
-    margin-top: 9em;
-  }
   .bottleContainer .bottleContent .bottleText h1 {
     font-size: 1.1em;
     letter-spacing: .15rem;
