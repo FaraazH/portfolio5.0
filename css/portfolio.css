@@ -99,8 +99,10 @@ p, h1 {
 .aboutContainer .aboutContent .aboutGraphic {
   grid-area: graphic;
   position: absolute;
-  width: 90%;
+  width: 100%;
+  max-width: 5.5em;
   bottom: 0;
+  filter: saturate(0);
 }
 
 .aboutContainer .aboutContent .aboutText {
@@ -124,10 +126,10 @@ p, h1 {
     margin-bottom: 20em;
   }
   .aboutContainer .aboutContent {
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: 2fr 3fr 1fr;
   }
   .aboutContainer .aboutContent .aboutGraphic {
-    max-width: 18em;
+    max-width: 8em;
   }
   .aboutContainer .aboutContent .aboutText p {
     font-size: 1rem;
@@ -792,7 +794,6 @@ p, h1 {
 }
 
 .contactContainer {
-  margin-bottom: 0;
   margin-top: 4em;
 }
 
@@ -810,8 +811,7 @@ p, h1 {
   grid-area: bottle;
   position: absolute;
   bottom: 0;
-  width: 5em;
-  filter: saturate(0);
+  width: 10em;
 }
 
 .contactContainer .contactBlock {
@@ -848,14 +848,92 @@ p, h1 {
   .contactContainer {
     margin-top: 9em;
   }
-  .contactContainer .contactContent .contentGraphic {
-    width: 7em;
+  .contactContainer .contactContent {
+    grid-template-rows: 1.5fr .5fr;
   }
-  .contactContainer .contactContent .contactText h1 {
+  .contactContainer .contactContent .contentGraphic {
+    width: 16em;
+  }
+  .contactContainer .contactContent .contactBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: .5em;
+  }
+  .contactContainer .contactContent .contactBlock .contactText h1 {
+    font-size: 1.1rem;
+    letter-spacing: .15rem;
+  }
+  .contactContainer .contactContent .contactBlock .contactText p {
+    font-size: 1rem;
+  }
+  .contactContainer .contactContent .contactBlock .contactMQ {
+    width: 70%;
+  }
+}
+
+.bottleContainer {
+  height: 50vh;
+  height: calc(var(--vh, 1vh) * 50);
+}
+
+.bottleContainer .bottleContent {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr .1fr;
+  grid-template-areas: '. bottle . ' 'text block block';
+}
+
+.bottleContainer .bottleGraphic {
+  grid-area: bottle;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.bottleContainer .bottleBlock {
+  grid-area: block;
+  background-color: #43635B;
+}
+
+.bottleContainer .blockText {
+  grid-area: text;
+  background-color: #43635B;
+  padding: 1.3em;
+}
+
+.bottleContainer .blockText h1 {
+  font-size: 1rem;
+  margin-bottom: .3em;
+  color: #FFB742;
+  letter-spacing: .1rem;
+}
+
+.bottleContainer .blockText p {
+  font-size: .95rem;
+  color: #131C1A;
+  letter-spacing: .05em;
+  user-select: text;
+}
+
+.bottleContainer .blockText .at {
+  color: #FFB742;
+  margin: 0 .2em 0 .2em;
+}
+
+@media (min-width: 500px) {
+  .bottleContainer {
+    margin-top: 9em;
+  }
+  .bottleContainer .bottleContent .bottleText h1 {
     font-size: 1.1em;
     letter-spacing: .15rem;
   }
-  .contactContainer .contactContent .contactText p {
+  .bottleContainer .bottleContent .bottleText p {
     font-size: 1rem;
   }
 }

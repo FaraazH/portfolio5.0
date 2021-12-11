@@ -108,7 +108,6 @@ p, h1 {
     margin-bottom: 10em;
 
         .aboutContent {
-            // background-color: antiquewhite;
             position: relative;
             height: 100%;
             width: 100%;
@@ -122,8 +121,10 @@ p, h1 {
             .aboutGraphic {
                 grid-area: graphic;
                 position: absolute;
-                width: 90%;
+                width: 100%;
+                max-width: 5.5em;
                 bottom: 0;
+                filter: saturate(0);
             }
             
             .aboutText {
@@ -152,10 +153,10 @@ p, h1 {
         margin-bottom: 20em;
 
         .aboutContent {
-            grid-template-columns: 1fr 3fr 1fr;
+            grid-template-columns: 2fr 3fr 1fr;
 
             .aboutGraphic {
-                max-width: 18em;
+                max-width: 8em;
             }
 
             .aboutText {
@@ -961,7 +962,7 @@ p, h1 {
 
 ////////////////////////////////////////////////////////////////////////CONTACT
 .contactContainer {
-    margin-bottom: 0;
+    // margin-bottom: 2em;
     margin-top: 4em;
 
     // .contactContent {
@@ -1010,8 +1011,7 @@ p, h1 {
         grid-area: bottle;
         position: absolute;
         bottom: 0;
-        width: 5em;
-        filter: saturate(0);
+        width: 10em;
     }
 
     .contactBlock {
@@ -1052,11 +1052,108 @@ p, h1 {
 
         .contactContent {
 
+            grid-template-rows: 1.5fr .5fr;
+
             .contentGraphic {
-                width: 7em;
+                width: 16em;
             }
 
-            .contactText {
+            .contactBlock {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                padding: .5em;
+
+                .contactText {
+            
+            
+                    h1 {
+                        font-size: 1.1rem;
+                        letter-spacing: .15rem;
+                    }
+            
+                    p { 
+                        font-size: 1rem;
+                    }
+                }
+            
+                .contactMQ {
+                    width: 70%;
+                }
+            }       
+        }
+    }
+}
+
+
+////////////////////////////////////////////////////////////////////////BOTTLE
+
+.bottleContainer {
+
+    height: 50vh;
+    height: calc(var(--vh, 1vh) * 50);
+
+    .bottleContent {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr .1fr;
+        grid-template-areas: 
+        '. bottle . '
+        'text block block';
+    }
+
+    .bottleGraphic {
+        grid-area: bottle;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        // max-width: 30em;
+    }
+
+    .bottleBlock {
+        grid-area: block;
+        background-color: #43635B;
+
+    }
+
+    .blockText {
+        grid-area: text;
+        background-color: #43635B;
+        padding: 1.3em;
+  
+        h1 {
+            font-size: 1rem;
+            margin-bottom: .3em;
+            color: #FFB742;
+            letter-spacing: .1rem;
+        }
+
+        p {
+            font-size: .95rem;
+            color: #131C1A;
+            letter-spacing: .05em;
+            user-select: text;
+        }
+
+        .at {
+            color: #FFB742;
+            margin: 0 .2em 0 .2em;
+        }
+    }
+}
+
+@media(min-width: 500px) {
+
+    .bottleContainer {
+        margin-top: 9em;
+
+        .bottleContent {
+
+            .bottleText {
 
                 h1 {
                     font-size: 1.1em;
@@ -1070,3 +1167,4 @@ p, h1 {
         }
     }
 }
+
