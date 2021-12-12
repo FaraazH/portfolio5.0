@@ -50,7 +50,6 @@ p, h1 {
 
 ////////////////////////////////////////////////////////////////////////INTRO
 .introContainer {
-    margin-bottom: 4em;
 
     .introContent{
         position: absolute;
@@ -89,6 +88,7 @@ p, h1 {
 @media(min-width: 500px) {
 
     .introContainer {
+        margin-bottom: 2em;
 
         h1 {
             font-size: 6rem;
@@ -122,9 +122,8 @@ p, h1 {
                 grid-area: graphic;
                 position: absolute;
                 width: 100%;
-                max-width: 5.5em;
+                min-width: 15em;
                 bottom: 0;
-                filter: saturate(0);
             }
             
             .aboutText {
@@ -153,10 +152,10 @@ p, h1 {
         margin-bottom: 20em;
 
         .aboutContent {
-            grid-template-columns: 2fr 3fr 1fr;
+            grid-template-columns: 2fr 2fr 1fr;
 
             .aboutGraphic {
-                max-width: 8em;
+                max-width: 25em;
             }
 
             .aboutText {
