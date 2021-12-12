@@ -122,7 +122,6 @@ p, h1 {
                 grid-area: graphic;
                 position: absolute;
                 width: 100%;
-                min-width: 15em;
                 bottom: 0;
             }
             
@@ -155,6 +154,7 @@ p, h1 {
             grid-template-columns: 2fr 2fr 1fr;
 
             .aboutGraphic {
+                min-width: 16em;
                 max-width: 25em;
             }
 
